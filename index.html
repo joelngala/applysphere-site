@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ApplySphere – MVP Preview</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- prevent random SEO indexing -->
+  <meta name="robots" content="noindex, nofollow" />
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at top, #5b7cff 0, #3b1f78 40%, #120624 100%);
+      color: #f9fafb;
+    }
+    .card {
+      width: 100%;
+      max-width: 720px;
+      background: rgba(15, 23, 42, 0.92);
+      border-radius: 24px;
+      padding: 2.25rem;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.55);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      backdrop-filter: blur(18px);
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    h1 span.brain {
+      font-size: 1.75rem;
+    }
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #cbd5f5;
+      margin-bottom: 1.25rem;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: linear-gradient(135deg, #22c55e, #4ade80);
+      color: #052e16;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.35rem 0.8rem;
+      border-radius: 999px;
+      margin-bottom: 0.9rem;
+    }
+    .columns {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.6fr);
+      gap: 1.75rem;
+      margin-top: 1.2rem;
+    }
+    .pill {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 16px;
+      padding: 0.9rem 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      font-size: 0.9rem;
+      margin-bottom: 0.55rem;
+    }
+    .pill strong { display: block; margin-bottom: 0.15rem; }
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1.2rem;
+      padding: 0.8rem 1.4rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #0b1120;
+      background: linear-gradient(135deg, #38bdf8, #6366f1);
+      border: none;
+      border-radius: 999px;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 18px 35px rgba(59,130,246,0.55);
+    }
+    .download-btn span.icon { font-size: 1.2rem; }
+    .note {
+      font-size: 0.78rem;
+      color: #9ca3af;
+      margin-top: 0.5rem;
+      line-height: 1.4;
+    }
+    .list {
+      font-size: 0.9rem;
+      color: #e5e7eb;
+      margin-top: 0.4rem;
+      padding-left: 1.1rem;
+    }
+    .list li { margin-bottom: 0.25rem; }
+    .email-box {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: #e5e7eb;
+    }
+    .email-box a {
+      color: #a5b4fc;
+      text-decoration: underline;
+    }
+    @media (max-width: 720px) {
+      .card { margin: 1rem; padding: 1.6rem; }
+      .columns { grid-template-columns: minmax(0, 1fr); }
+      h1 { font-size: 1.6rem; flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="badge">🎯 MVP Preview · Private Link</div>
+
+    <h1><span class="brain">🧠</span>ApplySphere</h1>
+    <h2>AI-Powered Job Application Automation · Desktop MVP Preview</h2>
+
+    <p style="font-size:0.95rem; color:#e5e7eb; line-height:1.5;">
+      This is an early preview of the ApplySphere desktop app. 
+      Install it on your Mac, connect your own API keys, and start 
+      searching and queuing jobs from Ashby + Workable.
+      Auto-apply is scheduled to go live in a later build.
+    </p>
+
+    <div class="columns">
+      <section>
+        <div class="pill">
+          <strong>What you can do in this preview</strong>
+          <ul class="list">
+            <li>🌐 Search jobs and see AI-ranked matches.</li>
+            <li>➕ Add Ashby & Workable roles to your personal queue.</li>
+            <li>📝 Fill your profile once and reuse it across searches.</li>
+            <li>🔑 Manage your own API keys locally (we never see them).</li>
+          </ul>
+        </div>
+        <div class="pill">
+          <strong>What’s still coming</strong>
+          <ul class="list">
+            <li>🚀 “Process Queue” auto-apply flows.</li>
+            <li>More ATS platforms beyond Ashby & Workable.</li>
+            <li>Richer analytics on which applications succeed.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="pill">
+          <strong>Download (macOS)</strong>
+          <p style="font-size:0.9rem; color:#e5e7eb;">
+            Apple Silicon (M1/M2/M3) build. 
+            For internal testers and trusted friends only.
+          </p>
+
+          <!-- Replace DOWNLOAD_URL_HERE with your GitHub Release DMG URL -->
+          <a class="download-btn" href="https://github.com/joelngala/ApplySphere1.0/releases/download/v1.0.0/rw.ApplySphere_1.0.0_aarch64.dmg">
+            <span class="icon">⬇️</span>
+            <span>Download ApplySphere for macOS</span>
+          </a>
+
+          <p class="note">
+            After opening the DMG, drag <strong>ApplySphere</strong> into your 
+            <strong>Applications</strong> folder. On first launch you may need to 
+            approve it in <em>System Settings → Privacy &amp; Security</em>.
+          </p>
+        </div>
+
+        <div class="email-box">
+          Questions or bugs? Email  
+          <a href="mailto:youremail@example.com">joelkngal@yahoo.com</a>  
+          with screenshots and a short description of what happened.
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
